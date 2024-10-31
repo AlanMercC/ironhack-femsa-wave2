@@ -1,4 +1,7 @@
+
 Task 2: Refactorización del codigo
+
+``` 
 
 //declare interface
 interface IPaymentProcessor {
@@ -74,6 +77,8 @@ class OrderProcessor {
         database.updateOrderStatus(order.id, status);
     }
 }
+
+```
 
 Tarea 3
 
