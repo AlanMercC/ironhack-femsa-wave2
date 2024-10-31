@@ -82,23 +82,23 @@ class OrderProcessor {
 
 Tarea 3
 
-SOLID Violado: SRP.
+## SOLID Violado: SRP.
 Solución: Se dividió en varias clases: InventoryManager, NotifyCustomer y IPaymentProcessor(StandardPaymentProcessor, ExpressPaymentProcessor), cada una con una única responsabilidad.
 Beneficio: Mejora la mantenibilidad del codigo y facilita la creación de pruebas unitarias.
 Problema: No tenia nada de responsabilidad unica y por lo tanto no se podia extender.
-SOLID Violado: OCP.
+## SOLID Violado: OCP.
 Solución: Implementación de una interfaz IPaymentProcessor que permite agregar nuevos tipos de procesadores de pago sin modificar el resto del sistema.
 Beneficio: Se pueden agregar nuevos métodos de pago fácilmente.
 Problema: Había dependencia directa entre metodos.
-SOLID Violado: LCP.
+## SOLID Violado: LCP.
 Solución: Se puede modificar el tipo de la interfaz IPaymentProcessor sin romper el resto del sistema.
 Beneficio: Se pueden agregar o modificar cualquier tipo implementado de esta interfaz.
 Problema: Dependencia a los dos tipos de pago.
-SOLID Violado: DIP.
+## SOLID Violado: DIP.
 Solución: Se introdujeron clases específicas para manejar pagos, lo que permite cambiar la implementación sin afectar a otras partes del código.
 Beneficio: Flexibilidad y facilidad para realizar modificaciones y en su caso pruebas.
 Problema: Solo existia una sola clase que tenia todas los metodos.
-SOLID Violado: ISP.
+## SOLID Violado: ISP.
 Solución: Se creo una interfaz específica y clases que manejan tareas individuales sin mezclar otras responsabilidades.
 Beneficio: Facilita el mantenimiento del código y la gestión del mismo.
 problema: no había segregación de interfaces
